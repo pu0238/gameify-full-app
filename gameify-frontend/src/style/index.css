@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --background-black: #202224;
+  --mint: #41d9bd;
+  --dark-mint: #35b19a;
+  --dark-blue: #3c5473;
+  --light-orange: #f28157;
+  --orange: #d95436;
+  --dark-orange: #732119;
+}
+
+body {
+  background: #202224;
+}
+
+.background-black {
+  background: var(--background-black)
+}
+
+.text-mint {
+  color: var(--mint)
+}
+
+.text-mint:hover {
+  color: var(--dark-mint)
+}
+
+.bd-mint {
+  background: var(--mint)
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

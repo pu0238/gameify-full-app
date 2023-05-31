@@ -1,0 +1,23 @@
+version: '3'
+services:
+  gameify-backend:
+    build:
+      context: ./gameify-backend
+      dockerfile: Dockerfile
+    ports:
+      - 4000:4000
+    networks:
+      - nesjs-network
+  gameify-frontend:
+    build:
+      context: ./gameify-frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    networks:
+      - nesjs-network
+    environment:
+      VITE_BACKEND: http://localhost:4000
+networks:
+    nesjs-network:
+      driver: bridge
